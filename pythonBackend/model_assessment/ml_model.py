@@ -1,17 +1,12 @@
 import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-import seaborn as sns
-import numpy as np
-import sklearn
-from platform import python_version
 import warnings
-from custom_functions import *
 from itertools import islice
 from sklearn.metrics import recall_score, accuracy_score, precision_score
 from sklearn.preprocessing import OneHotEncoder
 from joblib import dump
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, recall_score
+from sklearn.ensemble import RandomForestClassifier
 
 # Ignore warniings
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -150,13 +145,6 @@ for i in range(0,300):
     df_final.drop(columns=one_hot_cols, inplace=True)
     df_final.drop('ID', axis=1, inplace=True)
 
-    from sklearn.model_selection import train_test_split
-    from sklearn.metrics import classification_report, accuracy_score, recall_score
-    from sklearn.metrics import confusion_matrix
-    from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
-    from sklearn.tree import DecisionTreeClassifier
-    from lightgbm import LGBMClassifier
-
     # Features
     X = df_final.drop('NObeyesdad', axis=1)
 
@@ -182,8 +170,9 @@ for i in range(0,300):
 
     if accuracy > 0.99:
         model_filename = 'model/obesity_levels_model.joblib'
+        encoder_filename = 'model/obesity_levels_encoder.joblib'
         dump(model, model_filename)
-
+        dump(encoder, encoder_filename)
         print(f"Model saved to {model_filename}")
         break
 
