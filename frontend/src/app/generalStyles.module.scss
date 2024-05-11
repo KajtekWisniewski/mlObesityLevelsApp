@@ -1,0 +1,22 @@
+.article {
+  width: 800px;
+  text-align: justify;
+  margin-left: 20em;
+  padding-top: 2em;
+}
+
+.straightLine {
+  z-index: 0;
+  border: 1px solid rgba(252, 252, 252, 0.377);
+  margin-left: 8em;
+}
+
+.generalContainer {
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  padding-top: 91px;
+}

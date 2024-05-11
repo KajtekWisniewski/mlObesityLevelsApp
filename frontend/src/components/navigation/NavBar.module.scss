@@ -6,9 +6,26 @@
   font-weight: bold;
   color: #359eb4;
   gap: 1em;
-  background-color: rgb(255, 255, 255, 85%);
-  border-bottom: 5px dotted lightgray;
+  background-color: rgb(255, 255, 255);
   justify-content: space-around;
   padding: 0.5em;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.linkStyle {
+  color: #007695;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.generalStyles {
+  z-index: 0;
 }

@@ -1,5 +1,6 @@
 import { Oxygen } from 'next/font/google';
 import './globals.css';
+import styles from './generalStyles.module.scss';
 import NavBar from '../components/navigation/NavBar';
 
 const oxygen = Oxygen({ weight: '400', subsets: ['latin'] });
@@ -14,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={oxygen.className}>
         <NavBar />
-        {children}
+        <div className={styles.content}>{children}</div>
       </body>
     </html>
   );
