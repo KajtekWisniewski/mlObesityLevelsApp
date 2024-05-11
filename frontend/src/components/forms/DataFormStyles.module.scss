@@ -1,7 +1,17 @@
 .formikForm {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+  justify-content: center;
+}
+
+.formikForm > * {
+  border: 1px solid lightcyan;
+  padding: 0.5em;
+  flex: 0 0 calc(100% / 3); /* Ensure each item takes up one-third of the container width */
+  max-width: calc(100% / 3);
+  display: flex;
   flex-direction: column;
-  width: min-content;
-  padding: 3em;
-  justify-self: center;
 }

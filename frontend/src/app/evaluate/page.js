@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import DataForm from '../../components/forms/DataForm';
 import ResultComponent from '../../components/results/ResultComponent';
+import styles from '../generalStyles.module.scss';
 
 export default function Evaluate() {
   const [response, setResponse] = useState(null);
@@ -44,12 +45,14 @@ export default function Evaluate() {
 
   return (
     <div className="">
-      <DataForm initialValues={formValues} onSubmit={handleClick}></DataForm>
       {response !== null ? (
-        <ResultComponent resultFromApi={response}></ResultComponent>
+        <div className={styles.resultStyle}>
+          <ResultComponent resultFromApi={response}></ResultComponent>
+        </div>
       ) : (
         <div></div>
       )}
+      <DataForm initialValues={formValues} onSubmit={handleClick}></DataForm>
     </div>
   );
 }
