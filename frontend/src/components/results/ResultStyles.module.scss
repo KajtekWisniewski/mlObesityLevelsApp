@@ -1,0 +1,29 @@
+.resultComponent {
+  color: white;
+  border: 1px solid lightslategray;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+
+  &-1 {
+    background-color: lightgray;
+    @extend .resultComponent;
+  }
+
+  &-2 {
+    background-color: red;
+    @extend .resultComponent;
+  }
+
+  &-3 {
+    background-color: orange;
+    @extend .resultComponent;
+  }
+  &-4 {
+    background-color: lightgreen;
+    @extend .resultComponent;
+  }
+}

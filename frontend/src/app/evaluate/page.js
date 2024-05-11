@@ -3,6 +3,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import DataForm from '../../components/forms/DataForm';
+import ResultComponent from '../../components/results/ResultComponent';
 
 export default function Evaluate() {
   const [response, setResponse] = useState(null);
@@ -33,7 +34,7 @@ export default function Evaluate() {
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/result`,
         formValues
       );
-      //console.log('submitted successfuly:', response.data);
+      console.log('submitted successfuly:', response.data);
       setResponse(response.data);
     } catch (error) {
       console.error('Error adding player:', error);
@@ -44,7 +45,11 @@ export default function Evaluate() {
   return (
     <div className="">
       <DataForm initialValues={formValues} onSubmit={handleClick}></DataForm>
-      {response !== null ? <div>your obesity level: {response}</div> : <div></div>}
+      {response !== null ? (
+        <ResultComponent resultFromApi={response}></ResultComponent>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }
