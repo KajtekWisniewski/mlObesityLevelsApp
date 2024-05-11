@@ -7,6 +7,14 @@ export default function About() {
       <div className={styles.article}>
         <h1>Overview</h1>
 
+        <p>
+          This website has been created to help you find out if you have a problem with
+          your weight using a machine learning model trained on a dataset of 10 000
+          samples. The model can help you determine if you have an insufficient weight,
+          normal weight, slight overweight or obesity level from range I-III with level
+          III being morbid obesity.
+        </p>
+
         <h2>What is morbid obesity (now known as class III obesity)?</h2>
         <p>
           Class III obesity, formerly known as morbid obesity, is a complex chronic

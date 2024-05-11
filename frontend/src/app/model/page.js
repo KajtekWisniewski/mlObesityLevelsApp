@@ -1,9 +1,20 @@
+import styles from '../generalStyles.module.scss';
+
 export default function ModelPage() {
   return (
-    <div className="">
-      <h1> hello</h1>
-      <span>regular ass text</span>
-      <div>ok</div>
+    <div className={styles.generalContainer}>
+      <div className={styles.article}>
+        <h1>Dokumentacja modelu</h1>
+        <p>
+          Model machine learningu wykorzystany do tego projektu został napisany z pomocą
+          samouczka ze strony
+          <a href="https://www.kaggle.com/code/tkunzler/obesity-levels-acc-98-eda/notebook">
+            &nbsp;kaggle.
+          </a>
+        </p>
+        <p>Strona poza dokumentacją jest w jęzku angielskim.</p>
+      </div>
+      <div className={styles.straightLine}></div>
     </div>
   );
 }
