@@ -12,7 +12,14 @@ export default function ModelPage() {
             &nbsp;kaggle.
           </a>
         </p>
-        <p>Strona poza dokumentacją jest w jęzku angielskim.</p>
+        <p>Strona poza dokumentacją jest w języku angielskim.</p>
+        <pre>
+          <code>
+            {`function test() {
+          console.log("Hello, world!");
+        }`}
+          </code>
+        </pre>
       </div>
       <div className={styles.straightLine}></div>
     </div>
