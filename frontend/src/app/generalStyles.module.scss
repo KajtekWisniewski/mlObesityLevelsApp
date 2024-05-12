@@ -90,3 +90,32 @@
   flex-direction: column;
   align-items: center;
 }
+
+.table {
+  font-size: 0.75em;
+  thead {
+    tr {
+      th {
+        border: 1px solid white;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border: 1px solid white;
+      }
+    }
+  }
+}
+
+.code {
+  border: 1px solid white;
+  padding: 1em;
+  background-color: black;
+}
+
+.labeling {
+  text-align: center;
+  margin-left: 2em;
+}
