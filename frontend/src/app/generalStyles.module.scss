@@ -39,6 +39,7 @@
   align-items: center;
   width: 75%;
   text-align: justify;
+  gap: 2em;
 }
 
 .linkStyle {
@@ -54,12 +55,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1em;
 }
 
 .content {
   width: 100%;
 }
 
-.header > h1 {
-  font-size: 2.5em;
+.header {
+  > h1,
+  h2,
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.titleHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+.aboutHeader {
+  text-align: justify;
+  text-align: center;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
