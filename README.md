@@ -2,8 +2,6 @@
 
 Simple web app for detecting obesity levels with the use of react, next.js, javascript and python
 
-and in the futurefuture: .NET, typescript, sql based relational database
-
 # Dataset:
 
 - https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels
